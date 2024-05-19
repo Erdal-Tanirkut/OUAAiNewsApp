@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "50764376236",
+    "project_id": "newsfirebasetrial",
+    "storage_bucket": "newsfirebasetrial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50764376236:android:3c842c1440592049221709",
+        "android_client_info": {
+          "package_name": "com.example.newsclass_firebasetrial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKOHGh4Oo-VVxQkGD_-ONX3IM6msUTS1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
