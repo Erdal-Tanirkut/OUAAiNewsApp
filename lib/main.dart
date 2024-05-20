@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newsclass_firebasetrial/view/haberlerekrani.dart';
+
+import 'view/haberlerekrani.dart';
+
 
 void main() {
   runApp(const MyApp());
