@@ -43,7 +43,13 @@ class _asktoAIState extends State<asktoAI> {
         body: Center(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Text(_generatedContent),
+              child: Container(
+                  padding: EdgeInsets.all(8), // Tüm kenarlara padding uygula
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.red), // Kırmızı renkte bir border ekle
+                    borderRadius:BorderRadius.circular(10),
+                  ),
+                  child: Text(_generatedContent)),
             ),
             ),
         );}
