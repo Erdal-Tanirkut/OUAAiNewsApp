@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('HaberApp'),
+        title: Text('TICU'),
         actions: [
           IconButton(
             icon: Icon(Icons.person),

@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 
 class asktoAI extends StatefulWidget {
-  final String title;
-  const asktoAI({super.key, required this.title});
+  final String content;
+  const asktoAI({super.key, required this.content});
 
 
   @override
@@ -19,14 +19,16 @@ class _asktoAIState extends State<asktoAI> {
   @override
   void initState() {
     super.initState();
-    _generateContent(this.toString());
+    _generateContent(widget.content);
   }
 
   void _generateContent(String content) {
     final gemini = Gemini.instance;
-    gemini.streamGenerateContent('Bu haber içeriği doğru mu ${widget.title}')
+    gemini.streamGenerateContent('Bu haber içeriği doğru mu,tek cümlede açıkla ${widget.content}')
         .listen((value) {
-      print(value.output);
+      setState(() {
+        _generatedContent = value.output!;
+      });
     }).onError((e) {
       log('streamGenerateContent exception', error: e);
     });

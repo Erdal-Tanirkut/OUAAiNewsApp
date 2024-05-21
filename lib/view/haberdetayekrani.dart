@@ -14,7 +14,7 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("HaberApp"),
+        title: Text("TICU"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -52,7 +52,7 @@ class Info extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => asktoAI(title: title)),
+                  MaterialPageRoute(builder: (context) => asktoAI(content: content)),
                 );
               },
               icon: Icon(Icons.account_balance),
