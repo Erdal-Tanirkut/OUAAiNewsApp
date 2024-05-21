@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:newsclass_firebasetrial/view/profilekrani.dart';
+import '/view/profilekrani.dart';
 import '../model/giris.dart';
+import 'haberlerekrani.dart';
 import 'kayitekrani.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => profilePage(),
+          builder: (context) => MyHomePage(),
         ),
       );
     } on FirebaseAuthException catch (e) {

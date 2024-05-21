@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_deneme/viewpart/haberdetayekrani.dart';
+import 'haberdetayekrani.dart';
 class NewsItem extends StatelessWidget {
   final String imageUrl;
   final String title;

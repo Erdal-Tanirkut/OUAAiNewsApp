@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:newsclass_firebasetrial/view/kayitekrani.dart';
+import 'kayitekrani.dart';
 
 class splashScreen extends StatefulWidget {
   const splashScreen({super.key});

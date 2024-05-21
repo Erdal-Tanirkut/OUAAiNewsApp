@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:newsclass_firebasetrial/view/girisekrani.dart';
-import 'package:newsclass_firebasetrial/model/giris.dart'; // Adjust import as needed
+import '/view/girisekrani.dart';
+import '/model/giris.dart'; // Adjust import as needed
 
 class RegisterPage extends StatefulWidget {
   @override

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project_deneme/view/profilekrani.dart';
+import 'askaipage.dart';
 
 class Info extends StatelessWidget {
   final String imageUrl;
@@ -41,6 +43,38 @@ class Info extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => asktoAI(title: title)),
+                );
+              },
+              icon: Icon(Icons.account_balance),
+            ),
+            label: 'Check Truth',
+          ),
+          BottomNavigationBarItem(
+            icon: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const profilePage()),
+                );
+              },
+              icon: Icon(Icons.person),
+            ),
+            label: 'Profile',
+          ),
+
+
+
+        ],
       ),
     );
   }

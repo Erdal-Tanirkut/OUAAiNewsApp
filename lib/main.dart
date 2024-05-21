@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import '/view/splashekrani.dart';
 
 
-import 'viewpart/haberlerekrani.dart';
+
 
 void main() async {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const MyHomePage(),
+      home: const splashScreen(),
     );
   }
 }
