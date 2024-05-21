@@ -1,33 +1,45 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Info extends StatelessWidget {
-  const Info({super.key});
+  final String imageUrl;
+  final String title;
+  final String content;
+  final String category;
+  const Info({required this.imageUrl, required this.title, required this.content,required this.category});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profil'),
+        title: Text("HaberApp"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Image.asset('assets/news_image.jpg'), // Update with actual path
-            SizedBox(height: 8),
-            Text(
-              'Yapay Zekâ Destekli Tarım: Verimlilikte Yeni Dönem Başlıyor',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 8),
-            Text('15.05.2024', style: TextStyle(color: Colors.grey)),
-            SizedBox(height: 8),
-            Text(
-              'Yapay zekâ teknolojileri, tarım sektöründe devrim yaratıyor. Sensörler ve veri analizi ile çiftçiler, mahsul verimliliğini artırıyor, su ve gübre kullanımını optimize ediyor. Bu yenilikler, sürdürülebilir tarımı destekleyerek gıda üretiminde önemli bir artış sağlıyor.',
-              style: TextStyle(fontSize: 16),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                child: Image.asset(imageUrl), // Resmi burada göster
+              ),
+              SizedBox(height: 8),
+              Text(
+                title,
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 8),
+              Text(
+                '15.05.2024',
+                style: TextStyle(color: Colors.grey),
+              ),
+              SizedBox(height: 8),
+              Text(
+                content,
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
         ),
       ),
     );
