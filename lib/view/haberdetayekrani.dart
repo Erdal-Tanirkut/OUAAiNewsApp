@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_project_deneme/view/profilekrani.dart';
 import 'askaipage.dart';
 
@@ -14,7 +15,7 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("TICU"),
+      title: Text('TICU'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -22,8 +23,11 @@ class Info extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                child: Image.asset(imageUrl), // Resmi burada göster
+              Container(
+                padding:EdgeInsets.all(20),
+                child: SizedBox(
+                  child: Image.asset(imageUrl), // Resmi burada göster
+                ),
               ),
               SizedBox(height: 8),
               Text(
@@ -36,9 +40,12 @@ class Info extends StatelessWidget {
                 style: TextStyle(color: Colors.grey),
               ),
               SizedBox(height: 8),
-              Text(
-                content,
-                style: TextStyle(fontSize: 16),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Text(
+                  content,
+                  style: TextStyle(fontSize: 20),
+                ),
               ),
             ],
           ),

@@ -1,0 +1,1 @@
+ C:\\Users\\yigitt\\Documents\\GitHub\\OUAAiNewsApp\\.dart_tool\\flutter_build\\4e2addebde41bb263df877f512739752\\native_assets.yaml: 

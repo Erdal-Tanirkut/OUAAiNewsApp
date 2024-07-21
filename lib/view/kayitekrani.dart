@@ -13,7 +13,22 @@ class _RegisterPageState extends State<RegisterPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  final FocusNode _emailFocusNode = FocusNode();
+  final FocusNode _passwordFocusNode = FocusNode();
+
   String? errorMessage;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _emailFocusNode.addListener(() {
+      setState(() {});
+    });
+    _passwordFocusNode.addListener(() {
+      setState(() {});
+    });
+  }
 
   Future<void> createUserWithEmailAndPassword() async {
     try {
@@ -50,6 +65,7 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(height: 70),
               TextFormField(
                 controller: _usernameController,
+                focusNode: _emailFocusNode,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.mail_outline),
                   labelText: 'Email',
@@ -69,6 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
               SizedBox(height: 25),
               TextFormField(
                 controller: _passwordController,
+                focusNode: _passwordFocusNode,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock_outline),
                   labelText: 'Password',
@@ -113,16 +130,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 ],
               ),
               SizedBox(height: 25),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
-                    ),
-                  );
-                },
-                child: Text("Already have an account? Sign in"),
-              ),
+              if (!_emailFocusNode.hasFocus && !_passwordFocusNode.hasFocus)
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(),
+                      ),
+                    );
+                  },
+                  child: Text("Already have an account? Sign in"),
+                ),
             ],
           ),
         ),

@@ -67,7 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('TICU'),
+        title: Container(
+            padding:EdgeInsets.only(right:80,top: 20),
+            height:100,
+
+            child: Image.asset('images/logo.png')),
         actions: [
           IconButton(
             icon: Icon(Icons.person),

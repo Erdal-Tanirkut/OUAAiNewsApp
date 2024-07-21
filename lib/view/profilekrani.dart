@@ -16,7 +16,7 @@ class profilePage extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 40,
-              backgroundImage: AssetImage('assets/profile.jpg'), // Update with actual path
+              backgroundImage: AssetImage('images/profile.png'), // Update with actual path
             ),
             SizedBox(height: 8),
             TextButton(
@@ -25,20 +25,17 @@ class profilePage extends StatelessWidget {
             ),
             ListTile(
               title: Text('Name'),
-              subtitle: Text('Helena Hills'),
+              subtitle: Text('Yigit Ozgul'),
             ),
             ListTile(
-              title: Text('Username'),
-              subtitle: Text('@username'),
+              title: Text('Userme'),
+              subtitle: Text('@yigitt14'),
             ),
             ListTile(
               title: Text('Email'),
-              subtitle: Text('name@domain.com'),
+              subtitle: Text('akademi@hotmail.com'),
             ),
-            ListTile(
-              title: Text('Bio'),
-              subtitle: Text('A description of this user.'),
-            ),
+
           ],
         ),
       ),
